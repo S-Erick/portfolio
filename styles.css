@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Share+Tech+Mono&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Poppins", serif;
+    scroll-behavior: smooth;
+}
+:root{
+    --main-text: #000000;
+    --second-text: #d6d6d6;
+    --third-text: #a8a8a81c;
+    --hover-text: #fff;
+    --cards: #2c2c2ca8;
+    --links: #71aaff;
+    --background: #d0d4d7;
+}
+body{
+    width: 100%;
+    background-color: var(--background);
+}
+.section-container{
+    width: 100%;
+    height: 100vh;
+    padding: 0 5%;
+    display: grid;
+    place-items: center;
+    position: relative;
+}
+.section-container > h2{
+    top: 10%;
+    left: 8%;
+    position: absolute;
+}
+.content-container{
+    width: 70rem;
+}
+/* =============================general=============================== */
+
+/* =============================main=============================== */
+#inicio{
+    background-image: url(img/fondo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#inicio > main{
+    aspect-ratio: 2/1;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+    'box header'
+    'box name';
+    gap: 1rem;
+    position: relative;
+}
+#inicio > main > header{
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cards);
+    grid-area: header;
+}
+#inicio > main > header > nav > ul{
+    display: flex;
+    gap: 2rem;
+}
+#inicio > main > header > nav > ul > li > a{
+    color: var(--second-text);
+}
+#inicio > main > header > nav > ul > li > a:hover{
+    color: var(--hover-text);
+}
+#inicio > main > div:nth-child(2){
+    background-color: var(--cards);
+    grid-area: box;
+}
+#inicio > main > div:nth-child(3){
+    top: 15%;
+    left: -20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 400%;
+    line-height: 6rem;
+    grid-area: name;
+    position: absolute;
+    color: var(--hover-text);
+    text-shadow: 0 0 10px #2928288f;
+}
+#inicio > main > div:nth-child(3) > span:nth-child(2){
+    font-size: 200%;
+    font-weight: 600;
+    display: inline-block;
+    font-family: "Oswald", serif;
+}
+#inicio > main > div:nth-child(3) > span:nth-child(3){
+    font-family: "Share Tech Mono", monospace;
+}
+/* =============================proyectos=============================== */
+
+#proyectos > section{
+    aspect-ratio: 2/1;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+    'info cards';
+}
+#proyectos > section > div{
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    gap: 6%;
+    background-color: var(--cards);
+    grid-area: info;
+}
+#proyectos > section > div > span{
+    font-size: 500%;
+    font-weight: 500;
+    color: var(--hover-text);
+}
+#proyectos > section > div > h3, p{
+    color: var(--second-text);
+}
+#proyectos > section > div > a{
+    color: var(--links);
+}
+#proyectos > section > aside{
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    overflow-y: scroll;
+    grid-area: cards;
+}
+#proyectos > section > aside::-webkit-scrollbar{
+    display: none;
+}
+#proyectos > section > aside > section{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+}
+#proyectos > section > aside > section > div{
+    width: 100%;
+    aspect-ratio: 1.5/1;
+    background-color: var(--cards);
+    position: relative;
+}
+#proyectos > section > aside > section > div:nth-child(1){
+    background-image: url(img/calculo\ de\ notas.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#proyectos > section > aside > section > div:hover{
+    border: 1px solid var(--hover-text);
+}
+#proyectos > section > aside > section > div > span{
+    font-size: 400%;
+    top: -1rem;
+    color: var(--hover-text);
+    position: absolute;
+}
+
+/* =============================herramientas=============================== */
+
+#herramientas > section{
+    aspect-ratio: 2/1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;
+}
+#herramientas > section > div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: var(--cards);
+}
+#herramientas > section > div:hover{
+    border: 1px solid var(--hover-text);
+}
+#herramientas > section > div > img{
+    width: 40%;
+    aspect-ratio: 1/1;
+    z-index: 1;
+}
+#herramientas > section > div > span{
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    font-size: clamp(1rem, 4.3vw, 100rem);
+    font-weight: 700;
+    font-family: "Oswald", serif;
+    transform: skewX(-16deg);
+    color: var(--third-text);
+}
+
+/* =============================contacto=============================== */
+
+#contacto > section{
+    aspect-ratio: 2/1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 1rem;   
+}
+#contacto > section > div{
+    width: 100%;
+    height: 100%;
+    padding-left: 8%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 6%;
+    background-color: var(--cards);
+}
+#contacto > section > div:hover{
+    border: 1px solid var(--hover-text);
+}
+#contacto > section > div > img{
+    width: 30%;
+    aspect-ratio: 1/1;
+    filter: invert(100%) brightness(80%);
+}
+#contacto > section > div > a{
+    font-size: clamp(1rem, 2vw, 4rem);
+    color: var(--second-text);
+}
+#contacto > section > div > a:hover{
+    color: var(--hover-text);
+}
+
+/* =============================responsive=============================== */
+
+@media (width < 1200px) {
+    .content-container{
+        width: 100%;
+    }
+    .section-container > h2{
+        margin-left: 5%;
+    }
+    #inicio > main{
+        aspect-ratio: 0/0;
+        height: 75%;
+        grid-template-areas:
+        'header header'
+        'box name';
+    }
+    #proyectos > section{
+        aspect-ratio: 0/0;
+        margin-top: 10%;
+        height: 75%;
+        gap: 1rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+        'info'
+        'cards';
+    }
+}
+@media (width < 580px) {
+    #inicio > main{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr 1fr;
+        grid-template-areas:
+        'header'
+        'name'
+        'box';
+    }
+    #inicio > main > header{
+        display: none;
+    }
+    #inicio > main > div:nth-child(3){
+        top: 15%;
+        left: -0%;
+        gap: 1rem;
+        font-size: 12vw;
+    }
+    #inicio > main > div:nth-child(3) > span:nth-child(3){
+        line-height: 3rem;
+    }
+    #herramientas > section{
+        aspect-ratio: 0/0;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+    #herramientas > section > div{
+        aspect-ratio: 1.5/1;
+    }
+    #contacto > section{
+        width: 60%;
+        height: 80%;
+        margin-top: 25%;
+        aspect-ratio: 0/0;
+        display: flex;
+        flex-direction: column;
+        gap: 1%;
+    }
+    #contacto > section > div{
+        width: 100%;
+    }
+}
