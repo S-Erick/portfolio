@@ -19,8 +19,9 @@
     --links: #71aaff;
     --background: #d0d4d7;
 }
-body{
+html, body{
     width: 100%;
+    height: 100%;
     background-color: var(--background);
 }
 .section-container{
@@ -40,7 +41,9 @@ body{
     width: 70rem;
 }
 /* =============================general=============================== */
-
+.blur{
+    backdrop-filter: blur(6px);
+}
 /* =============================main=============================== */
 #inicio{
     background-image: url(img/fondo.png);
@@ -61,12 +64,16 @@ body{
     position: relative;
 }
 #inicio > main > header{
+    height: 3rem;
     padding: 2%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: var(--cards);
     grid-area: header;
+    position: sticky;
+    top: 1rem;
+    z-index: 1;
 }
 #inicio > main > header > nav > ul{
     display: flex;
@@ -107,7 +114,7 @@ body{
     white-space: nowrap;
     font-family: "Share Tech Mono", monospace;
     border-right: 3px solid var(--main-text);
-    animation: typing 2s steps(20, end) forwards,
+    animation: typing 2s steps(20, end) .5s forwards,
     blinkCursor .5s step-end 100 alternate forwards;
 }
 @keyframes typing{
@@ -144,7 +151,8 @@ body{
     font-weight: 500;
     color: var(--hover-text);
 }
-#proyectos > section > div > h3, p{
+#proyectos > section > div > h3, 
+#proyectos > section > div > p{
     color: var(--second-text);
 }
 #proyectos > section > div > a{
@@ -169,26 +177,36 @@ body{
     gap: 1rem;
     position: absolute;
 }
-#proyectos > section > aside > section > div{
+.card{
     width: 100%;
+    margin-top: 1px;
     aspect-ratio: 1.5/1;
     background-color: var(--cards);
     position: relative;
-}
-#proyectos > section > aside > section > div:nth-child(1){
-    background-image: url(img/calculo\ de\ notas.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    outline: 1px solid var(--cards);
 }
-#proyectos > section > aside > section > div:hover{
-    border: 1px solid var(--hover-text);
+.card::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.134);
 }
-#proyectos > section > aside > section > div > span{
+.card:hover{
+    outline: 1px solid var(--hover-text);
+    cursor: pointer;
+}
+.card> span{
     font-size: 400%;
     top: -1rem;
     color: var(--hover-text);
     position: absolute;
+    z-index: 1;
 }
 
 /* =============================herramientas=============================== */
