@@ -24,7 +24,7 @@ const proyectos = {
         titulo: "Servicios de fotografia",
         descripcion: "Diseño y desarrollo de una página web para servicios de fotografía, enfocada en ofrecer una experiencia visual atractiva y funcional. El proyecto incluye una presentación de portafolio, información sobre los servicios y una interfaz intuitiva para facilitar la interacción con los clientes.",
         linkTexto: "Ir al proyecto",
-        linkHref: "https://s-erick.github.io/sprint-1-2-3/index.html",
+        linkHref: "https://s-erick.github.io/Photography-services/",
         activo: false,
         imagen: "img/photography-services.png"
     },
