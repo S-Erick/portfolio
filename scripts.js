@@ -37,12 +37,12 @@ const proyectos = {
         imagen: "img/task-manager.png"
     },
     "04": {
-        titulo: "Próximamente",
-        descripcion: "Este proyecto está en proceso.",
-        linkTexto: "En proceso",
-        linkHref: "#",
+        titulo: "Registro de Usuarios con Validación de Campos",
+        descripcion: "Es un proyecto web que implementa un formulario de registro con validaciones en tiempo real para asegurar la correcta entrada de datos. Está desarrollado con HTML, CSS y JavaScript, integrando también opciones de autenticación rápida mediante Google y Apple (proximamente).",
+        linkTexto: "Ir al proyecto",
+        linkHref: "https://s-erick.github.io/Registro-de-Usuarios-con-Validaci-n-de-Campos/",
         activo: false,
-        imagen: "img/proximamente.png"
+        imagen: "img/RUVC.png"
     }
 };
 
